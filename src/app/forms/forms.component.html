@@ -1,0 +1,75 @@
+<h1>Welcome to login</h1>
+<form>
+    <mat-card class="samplecard">
+        <mat-form-field>
+            <mat-label>Username:</mat-label>
+            <input matInput name="uname" label='uname' #uname>
+        </mat-form-field>
+    </mat-card>
+    <mat-card class="samplecard1">
+        <mat-form-field>
+            <mat-label>Password:</mat-label>
+            <input matInput name="password" label="password" #password>
+
+        </mat-form-field>
+        <button mat-button (click)="Onclick()">Submit</button>
+    </mat-card>
+    <h1>Username: {{uname.value}}</h1>
+    <h2>Password: {{password.value}}</h2>
+    <div>
+        <h1>{{title}}</h1>
+        <br>
+        <h2>{{topic}}</h2>
+        <br>
+    </div>
+    <div>
+        <img [src]="img1" alt="image1">
+    </div>
+    <div>
+
+        <h2>Displaying EmpNames:</h2>
+
+        <ul>
+            <li *ngFor=" let e1 of empname">
+                {{e1}}
+            </li>
+        </ul>
+
+
+    </div>
+    <div>
+        <ul>
+            <h2>Displaying Objects:</h2>
+            <li *ngFor="let e2 for emp">
+                {{e2.fname}} {{e2.age}}
+            </li>
+        </ul>
+    </div>
+
+</form>
+
+<h1>All about pipes</h1>
+
+<p>{{username}}</p>
+<p>{{username|uppercase}}</p>
+<p>{{username|lowercase}}</p>
+<p>{{username|titlecase}}</p>
+<p>{{username|slice:3}}</p>
+
+
+<!--<h2>{{empname|formatname}}</h2>-->
+
+
+<!--<form >
+    <mat-card class="samplecard">
+        <mat-form-field >
+            <mat-label>UserName:</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field >
+              <mat-label>Password:</mat-label>
+              <input matInput>
+            </mat-form-field>
+    </mat-card>
+    <form >
+-->

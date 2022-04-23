@@ -1,0 +1,26 @@
+<p>login works!</p>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form [formGroup]="userForm">
+
+        <label for="">Name:</label>
+        <input type="text" formControlName="firstname">
+        <p *ngIf="!firstname?.valid && (firstname?.dirty ||firstname?.touched)">
+            first name is required
+        </p>
+        <label for="">RollNo:</label>
+        <input type="text" formControlName="rollno">
+        <label for="">email:</label>
+        <input type="email" formControlName="email" required>
+        <label for="">Password:</label>
+        <input type="password" formControlName="password" required>
+
+        <button type="submit" [disabled]="!userForm.valid">
+            submit</button>
+
+    </form>
+    <pre>{{userForm.value | json}}</pre>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,10 @@
+<p>newcomp works!</p>
+
+
+<div>
+    <input type=" checkbox " [(ngModel)]="value1 " #checkbox> Coursename
+    <div *ngIf="checkbox.checked ">
+        <p *ngFor="let cname of coursename ">
+            {{cname}}
+        </p>
+    </div>
